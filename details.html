@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Car Details</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+img{max-height:400px;object-fit:cover}
+footer{background:#111;color:#fff;padding:10px;text-align:center}
+</style>
+</head>
+<body>
+
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" width="30" height="24" class="d-inline-block align-text-top">
+      Super Car Gallery
+    </a>
+  </div>
+</nav>
+
+<div class="container my-5 text-center">
+  <h2 id="title"></h2>
+  <img id="image" class="img-fluid my-3">
+  <p id="info"></p>
+</div>
+
+<footer>
+  © 2026 Supercar Gallery
+</footer>
+
+<script>
+const cars = {
+  bugatti: {
+    name:"Bugatti Chiron",
+    img:"https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg",
+    info:"8.0L quad-turbo W16 engine producing 1500 HP.A car, or an automobile, is a motor vehicle with wheels.Most definitions of cars state that they run primarily on roads, seat 1-8 people, have four wheels, and mainly transport people rather than cargo. There are over 1.6 billion cars in use worldwide as of 2025.The French inventor Nicolas-Joseph Cugnot built the first steam-powered road vehicle in 1769, while the Swiss inventor François Isaac de Rivaz designed and constructed the first internal combustion-powered automobile in 1808."
+  },
+  lamborghini: {
+    name:"Lamborghini Aventador",
+    img:"https://images.pexels.com/photos/2127733/pexels-photo-2127733.jpeg",
+    info:"6.5L V12 engine with aggressive aerodynamic design.A car, or an automobile, is a motor vehicle with wheels.The French inventor Nicolas-Joseph Cugnot built the first steam-powered road vehicle in 1769, while the Swiss inventor François Isaac de Rivaz designed and constructed the first internal combustion-powered automobile in 1808."
+  },
+  ferrari: {
+    name:"Ferrari LaFerrari",
+    img:"https://images.unsplash.com/photo-1628883714122-3b6ffeaf8f65?q=80&w=750&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    info:"Hybrid hypercar delivering 950 HP.A car, or an automobile, is a motor vehicle with wheels.8.0L quad-turbo W16 engine producing 1500 HP.A car, or an automobile, is a motor vehicle with wheels.Most definitions of cars state that they run primarily on roads, seat 1-8 people, have four wheels, and mainly transport people rather than cargo. There are over 1.6 billion cars in use worldwide as of 2025.The French inventor Nicolas-Joseph Cugnot built the first steam-powered road vehicle in 1769, while the Swiss inventor François Isaac de Rivaz designed and constructed the first internal combustion-powered automobile in 1808."
+  },
+  mclaren: {
+    name:"McLaren P1",
+    img:"https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg",
+    info:"Plug-in hybrid supercar with 903 HP.A car, or an automobile, is a motor vehicle with wheels.8.0L quad-turbo W16 engine producing 1500 HP.A car, or an automobile, is a motor vehicle with wheels.Most definitions of cars state that they run primarily on roads, seat 1-8 people, have four wheels, and mainly transport people rather than cargo. There are over 1.6 billion cars in use worldwide as of 2025.The French inventor Nicolas-Joseph Cugnot built the first steam-powered road vehicle in 1769, while the Swiss inventor François Isaac de Rivaz designed and constructed the first internal combustion-powered automobile in 1808."
+  },
+  porsche: {
+    name:"Porsche 911 Turbo",
+    img:"https://images.pexels.com/photos/1719648/pexels-photo-1719648.jpeg",
+    info:"Twin-turbo flat-six engine with iconic styling.A car, or an automobile, is a motor vehicle with wheels.8.0L quad-turbo W16 engine producing 1500 HP.A car, or an automobile, is a motor vehicle with wheels.Most definitions of cars state that they run primarily on roads, seat 1-8 people, have four wheels, and mainly transport people rather than cargo. There are over 1.6 billion cars in use worldwide as of 2025.The French inventor Nicolas-Joseph Cugnot built the first steam-powered road vehicle in 1769, while the Swiss inventor François Isaac de Rivaz designed and constructed the first internal combustion-powered automobile in 1808."
+  },
+  koenigsegg: {
+    name:"Koenigsegg Jesko",
+    img:"https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg",
+    info:"5.0L twin-turbo V8 producing up to 1600 HP.A car, or an automobile, is a motor vehicle with wheels.8.0L quad-turbo W16 engine producing 1500 HP.A car, or an automobile, is a motor vehicle with wheels.Most definitions of cars state that they run primarily on roads, seat 1-8 people, have four wheels, and mainly transport people rather than cargo. There are over 1.6 billion cars in use worldwide as of 2025.The French inventor Nicolas-Joseph Cugnot built the first steam-powered road vehicle in 1769, while the Swiss inventor François Isaac de Rivaz designed and constructed the first internal combustion-powered automobile in 1808."
+  }
+};
+
+const params = new URLSearchParams(window.location.search);
+const car = params.get("car");
+if(cars[car]){
+  document.getElementById("title").innerText = cars[car].name;
+  document.getElementById("image").src = cars[car].img;
+  document.getElementById("info").innerText = cars[car].info;
+}
+</script>
+
+</body>
+</html>

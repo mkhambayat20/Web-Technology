@@ -1,135 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Multi Sectional Webpage</title>
-
-    <style>
-        section {
-            display: none;
-        }
-
-        section:target {
-            display: block;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Supercar Gallery</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+img{height:200px;object-fit:cover}
+footer{background:#111;color:#fff;padding:10px;text-align:center}
+</style>
 </head>
 <body>
 
-    <h1>My Multi Sectional Webpage</h1>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">CarWale</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
 
-    <section id="home">
-        <h2>Home</h2>
-        <p>This is the home section. It is a long established fact that a reader will be distracted by the readable
-            content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-             normal distribution of letters, as opposed to using 'Content here, content here', making it look like 
-             readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their 
-             default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
-              Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour 
-              and the like).t is a long established fact that a reader will be distracted by the readable content of a
-               page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
-               distribution of letters, as opposed to using 'Content here, content here', making it look like readable 
-               English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model
-                text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions
-                 have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                 This is the home section. It is a long established fact that a reader will be distracted by the readable
-            content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-             normal distribution of letters, as opposed to using 'Content here, content here', making it look like 
-             readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their 
-             default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
-              Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour 
-              and the like).t is a long established fact that a reader will be distracted by the readable content of a
-               page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
-               distribution of letters, as opposed to using 'Content here, content here', making it look like readable 
-               English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model
-                text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions
-                 have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-            </p>
-        <a href="#about">
-            <button>Next Section</button>
-        </a>
-        <a href="#home">
-            <button>Back to Home</button>
-        </a>
-    </section>
+<div class="container my-4">
+  <div class="row g-4">
 
-
-    <section id="about">
-        <h2>About</h2>
-        <p>This section is about me.It is a long established fact that a reader will be distracted by the readable
-            content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-             normal distribution of letters, as opposed to using 'Content here, content here', making it look like 
-             readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their 
-             default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
-              Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour 
-              and the like).t is a long established fact that a reader will be distracted by the readable content of a
-               page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
-               distribution of letters, as opposed to using 'Content here, content here', making it look like readable 
-               English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model
-                text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions
-                 have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                 This is the home section. It is a long established fact that a reader will be distracted by the readable
-            content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-             normal distribution of letters, as opposed to using 'Content here, content here', making it look like 
-             readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their 
-             default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
-              Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour 
-              and the like).t is a long established fact that a reader will be distracted by the readable content of a
-               page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
-               distribution of letters, as opposed to using 'Content here, content here', making it look like readable 
-               English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model
-                text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions
-                 have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-        <a href="#services">
-            <button>Next Section</button>
+    <div class="col-md-4">
+      <div class="card">
+        <a href="details.html?car=bugatti">
+          <img src="https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg" class="card-img-top">
         </a>
-        <a href="#home">
-            <button>Back to Home</button>
-        </a>
-    </section>
+        <div class="card-body text-center">Bugatti Chiron</div>
+      </div>
+    </div>
 
-
-    <section id="services">
-        <h2>Services</h2>
-        <p>These are the services I provide.It is a long established fact that a reader will be distracted by the readable
-            content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-             normal distribution of letters, as opposed to using 'Content here, content here', making it look like 
-             readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their 
-             default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
-              Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour 
-              and the like).t is a long established fact that a reader will be distracted by the readable content of a
-               page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
-               distribution of letters, as opposed to using 'Content here, content here', making it look like readable 
-               English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model
-                text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions
-                 have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                 This is the home section. It is a long established fact that a reader will be distracted by the readable
-            content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-             normal distribution of letters, as opposed to using 'Content here, content here', making it look like 
-             readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their 
-             default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
-              Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour 
-              and the like).t is a long established fact that a reader will be distracted by the readable content of a
-               page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
-               distribution of letters, as opposed to using 'Content here, content here', making it look like readable 
-               English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model
-                text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions
-                 have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-        <a href="#contact">
-            <button>Next Section</button>
+    <div class="col-md-4">
+      <div class="card">
+        <a href="details.html?car=lamborghini">
+          <img src="https://images.pexels.com/photos/2127733/pexels-photo-2127733.jpeg" class="card-img-top">
         </a>
-        <a href="#home">
-            <button>Back to Home</button>
-        </a>
-    </section>
+        <div class="card-body text-center">Lamborghini Aventador</div>
+      </div>
+    </div>
 
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: mahesh@email.com Contact no.: 8989898980</p>
-        <a href="#home">
-            <button>Back to Home</button>
+    <div class="col-md-4">
+      <div class="card">
+        <a href="details.html?car=ferrari">
+          <img src="https://images.unsplash.com/photo-1628883714122-3b6ffeaf8f65?q=80&w=750&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top">
         </a>
-    </section>
+        <div class="card-body text-center">Ferrari LaFerrari</div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <a href="details.html?car=mclaren">
+          <img src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg" class="card-img-top">
+        </a>
+        <div class="card-body text-center">McLaren P1</div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <a href="details.html?car=porsche">
+          <img src="https://images.pexels.com/photos/1719648/pexels-photo-1719648.jpeg" class="card-img-top">
+        </a>
+        <div class="card-body text-center">Porsche 911 Turbo</div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <a href="details.html?car=koenigsegg">
+          <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg" class="card-img-top">
+        </a>
+        <div class="card-body text-center">Koenigsegg Jesko</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer style="position: fixed; bottom: 0; width: 100%;"> 
+  © 2026 Supercar Gallery
+</footer>
 
 </body>
 </html>
